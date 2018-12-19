@@ -1,0 +1,12 @@
+<h2>All Promises </h2>
+
+<div id="promises">
+  <% @promises.each do |promise| %>
+    <h3><%= link_to promise.title, promise_path(promise) %></h3>
+    <p> <%= promise.from %> </p>
+    <p> <%= promise.to %> </p>
+    <p> <%= promise.description %> </p>
+  <% end %>
+</div>
+
+<%= link_to "Create a New Promise", new_promise_path, class: "new-promise" %>

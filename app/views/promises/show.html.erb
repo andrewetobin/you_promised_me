@@ -1,0 +1,9 @@
+<h1><%= @promise.title %></h1>
+
+<p> <%= @promise.from %> </p>
+<p> <%= @promise.to %> </p>
+<p> <%= @promise.description %> </p>
+
+
+<%= link_to "Edit", edit_promise_path(@promise) %>
+<%= link_to "Delete", promise_path(@promise), method: :delete, data: {confirm: "Really delete the promise?"} %>

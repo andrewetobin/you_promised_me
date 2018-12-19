@@ -1,0 +1,24 @@
+<h1>Edit an Promise</h1>
+
+<%= form_for(@promise) do |f| %>
+  <ul>
+  <% @promise.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :from %><br />
+    <%= f.text_area :from %>
+  </p>
+  <p>
+    <%= f.label :to %><br />
+    <%= f.text_area :to %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
